@@ -10,6 +10,8 @@
 ----------
 
 # Getting started
+## About
+This application is using Laravel 9 and PHP 8
 
 ## Installation
 Clone the repository
