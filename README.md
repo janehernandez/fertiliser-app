@@ -92,10 +92,13 @@ Run your local Development server
 
 ## Unit Testing
 Unit Testing is very crucial in testing an application, this is a way to prevent other developers breaking the code. to run the test in this app, kindly execute:
+
     php artisan test
 
 Alternatively, you can run the testing and stop the execution when there is an error found:
+
     php artisan test --testsuite=Feature --stop-on-failure
 
-***Note*** : When there is an issue that the unit testing is not running because of an error with Vite, kindly run this command and proceed with the unit testing again: 
+***Note*** : When there is an issue that the unit testing is not running because of an error with Vite, kindly run this command and proceed with the unit testing again:
+
     npm run build
