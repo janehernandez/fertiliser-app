@@ -15,7 +15,7 @@ class DashboardController extends Controller
      */
     public function __invoke()
     {
-        $logOrders  = LogOrderTransaction::with('product', 'order')->paginate(10);
+        $logOrders  = LogOrderTransaction::with('product', 'order')->orderByDesc('created_at')->paginate(10);
         $orders     = Order::all();
         $summary    = [
             'total_orders'      => $orders->count(),

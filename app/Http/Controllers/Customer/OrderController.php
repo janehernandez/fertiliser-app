@@ -18,8 +18,8 @@ class OrderController extends Controller
     public function index()
     {
         $userId = Auth::user()->id;
-        $orders = Order::whereUserId($userId)->paginate(10);
-        $logOrders = LogOrderTransaction::with('product')->whereUserId($userId)->get();
+        $orders = Order::whereUserId($userId)->orderByDesc('created_at')->paginate(10);
+        $logOrders = LogOrderTransaction::with('product')->whereUserId($userId)->orderByDesc('created_at')->get();
         return Inertia::render('Customer/Orders/Index', compact('orders', 'logOrders'));
     }
 }
