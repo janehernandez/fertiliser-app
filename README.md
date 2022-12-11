@@ -63,13 +63,11 @@ Run your local Development server
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
     php artisan migrate
-    npm run dev
+    npm run dev or npm run build
 
 ## Database seeding
 
 **Populate the database with seed data with relationships which includes users, and permissions. This can help you to quickly start testing a couple of frontend functionalities and start using it with ready content.**
-
-c
 
     php artisan db:seed
 
@@ -100,4 +98,4 @@ Alternatively, you can run the testing and stop the execution when there is an e
     php artisan test --testsuite=Feature --stop-on-failure
 
 ***Note*** : When there is an issue that the unit testing is not running because of an error with Vite, kindly run this command and proceed with the unit testing again: 
-    npm cache clean --force
+    npm run build
